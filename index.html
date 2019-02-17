@@ -25,10 +25,10 @@
       <div class="filter-options">
         <h2>Filter Results</h2>
         <select tabindex="2" id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
-          <option value="all">All Neighborhoods</option>
+          <option value="all" aria-label="options">All Neighborhoods</option>
         </select>
         <select tabindex="3" id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
-          <option tabindex="4" value="all">All Cuisines</option>
+          <option tabindex="4" value="all" aria-label="cuisine selection">All Cuisines</option>
         </select>
       </div>
       <ul id="restaurants-list"></ul>
@@ -41,7 +41,7 @@
   type="text/javascript"></script>
 
 
-  <footer id="footer">
+  <footer id="footer" aria-label="footer">
     Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
 
