@@ -88,17 +88,22 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
 
 //   updateRestaurants();
 // }
+
  window.initMap = () => {
   let loc = {
     lat: 40.722216,
     lng: -73.987501
   };
+  //Added the Window.Onload to prevent erorr in the console where new google.map would try 
+  //to be called before it was defined. 
+  window.onload = function () { 
   self.map = new google.maps.Map(document.getElementById('map'), {
     zoom: 12,
     center: loc,
     scrollwheel: false
   });
   updateRestaurants();
+  }
 } 
 
 /**
@@ -210,4 +215,12 @@ createRestaurantHTML = (restaurant) => {
     self.markers.push(marker);
   });
 } 
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+  .register('/sw.js')
+  .catch(function(err) {
+    console.error(err);
+  });
+}
 
