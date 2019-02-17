@@ -1,33 +1,47 @@
-# Mobile Web Specialist Certification Course
+# Restaurant Reviews: Stage 1
 ---
 #### _Three Stage Course Material Project - Restaurant Reviews_
 
 ## Project Overview: Stage 1
 
-For the **Restaurant Reviews** projects, you will incrementally convert a static webpage to a mobile-ready web application. In **Stage One**, you will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
+For the **Restaurant Reviews** projects, I converted a static webpage to a mobile-ready web application. I was able to make the application responsive on different sized displays and accessible for screen reader use. I was also able to add service worker to begin the process of creating a seamless offline experience for your users. The service worker seems to work fine, but throws some errors due to certain chrome extensions. I am hoping to get feedback on my Service Worker before the term ends. 
 
-### Specification
+### Criteria - Specifications
 
-You have been provided the code for a restaurant reviews website. The code has a lot of issues. It’s barely usable on a desktop browser, much less a mobile device. It also doesn’t include any standard accessibility features, and it doesn’t work offline at all. Your job is to update the code to resolve these issues while still maintaining the included functionality.
+#All content is responsive and displays on a range of display sizes.
 
-### Project Rubric
+#Content should make use of available screen real estate and should display correctly at all screen sizes.
 
-Your project will be evaluated by a Udacity code reviewer according to the [Restaurant Reviews project rubric](https://review.udacity.com/#!/rubrics/1090/view). Please review for detailed project requirements. The rubric should be a resource you refer to periodically to make sure your project meets specifications.
+#An image's associated title and text renders next to the image in all viewport sizes.
 
-### What do I do from here?
+# Images in the site are sized appropriate to the viewport and do not crowd or overlap other elements in the browser, regardless of viewport size.
 
-1. In this folder, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer.
+# On the main page, restaurants and images are displayed in all viewports. The detail page includes a map, hours and reviews in all viewports.
 
-    * In a terminal, check the version of Python you have: `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use.) For Python 3.x, you can use `python3 -m http.server 8000`. If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
-   * Note -  For Windows systems, Python 3.x is installed as `python` by default. To start a Python 3.x server, you can simply enter `python -m http.server 8000`.
-2. With your server running, visit the site: `http://localhost:8000`, and look around for a bit to see what the current experience looks like.
-3. Explore the provided code, and start making a plan to implement the required features in three areas: responsive design, accessibility and offline use.
-4. Write code to implement the updates to get this site on its way to being a mobile-ready website.
+#All content-related images include appropriate alternate text that clearly describes the content of the image.
 
-## Leaflet.js and Mapbox:
+#Focus is appropriately managed allowing users to noticeably tab through each of the important elements of the page. Modal or interstitial windows appropriately lock focus.
 
-This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/). Mapbox is free to use, and does not require any payment information.
+#Elements on the page use the appropriate semantic elements. For those elements in which a semantic element is not available, appropriate ARIA roles are defined.
 
-### Note about ES6
+# When available in the browser, the site uses a service worker to cache responses to requests for site assets. Visited pages are rendered when there is no network access.
 
-Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future-proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write.
+
+
+### CSS and Style Sheet
+
+I implemented @media queries and felx box to appropriatley get the application to scale correctly.
+
+## Leaflet.js. Mapbox and how I replaced it with Google Maps:
+
+I had an issue with Map Box and decided to replace it with Google Maps.
+
+## JavaScript
+
+I created a new file called sw.js and implemented the Service Worker in this file. I used these sites as reference as I had a difficult time implementing the service worker. 
+
+https://classroom.udacity.com/nanodegrees/nd001/parts/b1808a20-5e71-4dd3-bbc1-4ae86beefd6d
+https://matthewcranford.com/restaurant-reviews-app-walkthrough-part-4-service-workers/
+https://css-tricks.com/serviceworker-for-offline/
+https://developer.mozilla.org/en-US/docs/Web/API/Cache/put
+
