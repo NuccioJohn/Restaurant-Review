@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
   initMap();
 });
 
+
+//I am leaving the code here, because I want to get Map Box to worl later on my free time.
+// But I would normally remove it.
 /**
  * Initialize leaflet map
  */
@@ -46,7 +49,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         self.map = new google.maps.Map(document.getElementById('map'), {
           zoom: 16,
           center: restaurant.latlng,
-          scrollwheel: false
+          scrollwheel: false,
         });
         fillBreadcrumb();
         DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
@@ -93,6 +96,8 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  //added alt text
+  image.alt = "restaurant image";
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
