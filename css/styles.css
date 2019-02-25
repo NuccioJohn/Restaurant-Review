@@ -288,11 +288,25 @@ nav h1 a {
   color: #666; 
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 74px) {
   #restaurant-hours td {
     display: flex;
     flex-wrap: wrap; 
   } 
+  h1 {
+    display: flex;
+    flex-wrap: wrap; 
+  }
+  .header-thing{
+    display: flex;
+    flex-wrap: wrap; 
+    max-width: 90%;
+  }
+  footer {
+    display: flex;
+    vertical-align: middle;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 545px) {
@@ -301,5 +315,20 @@ nav h1 a {
     word-wrap:break-word;
     max-width: 60%;
   } 
+
+  h1 {
+    display: flex;
+    flex-wrap: wrap; 
+  }
+  .header-thing{
+    display: flex;
+    flex-wrap: wrap; 
+    max-width: 90%;
+  }
+  footer {
+    display: flex;
+    vertical-align: middle;
+    text-align: center;
+  }
 }
 
